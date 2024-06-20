@@ -4,6 +4,7 @@
 #include "test_lib.h"
 
 // Import user libraries here
+#include "lib.h"
 
 // Write unit tests here
 
