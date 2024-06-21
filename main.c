@@ -7,7 +7,7 @@
 int main(int argc, char** argv)
 {
         // This would be body of program
-        run();
+        run("0");
 
         return 0;
 }
