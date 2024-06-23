@@ -9,7 +9,13 @@
 // Write unit tests here
 void test_solve_expression(char* input, float expected)
 {
-        assert_is_true(false);
+        float actual = solve_expression(input);
+        bool are_equal = expected == actual;
+        assert_is_true(are_equal);
+
+        if (!are_equal) {
+                printf("expected: %f\nactual: %f\n", expected, actual);
+        }
 }
 
 // Run unit tests with specific values
@@ -19,6 +25,7 @@ void run_tests()
 
         // call test functions here
         test_solve_expression("0", 0.0);
+        test_solve_expression("1", 1.0);
 
         printf("complete.\n");
 }
