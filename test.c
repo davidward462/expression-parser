@@ -6,6 +6,8 @@
 // Import user libraries here
 #include "lib.h"
 
+// TODO: test remaining functions
+
 // Write unit tests here
 void test_solve_expression(char* input, float expected)
 {
@@ -13,6 +15,7 @@ void test_solve_expression(char* input, float expected)
         bool are_equal = expected == actual;
         assert_is_true(are_equal);
 
+        // TODO: maybe do this differently
         if (!are_equal) {
                 printf("expected: %f\nactual: %f\n", expected, actual);
         }
