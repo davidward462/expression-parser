@@ -16,6 +16,7 @@ void test_solve_expression(char* input, float expected)
         bool are_equal = compare_float(expected, actual);
         assert_is_true(are_equal);
 
+        // Show details if test fails
         if (!are_equal) {
                 print_expected_actual_float(expected, actual);
         }
