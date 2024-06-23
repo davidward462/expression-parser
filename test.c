@@ -12,12 +12,12 @@
 void test_solve_expression(char* input, float expected)
 {
         float actual = solve_expression(input);
-        bool are_equal = expected == actual;
+
+        bool are_equal = compare_float(expected, actual);
         assert_is_true(are_equal);
 
-        // TODO: maybe do this differently
         if (!are_equal) {
-                printf("expected: %f\nactual: %f\n", expected, actual);
+                print_expected_actual_float(expected, actual);
         }
 }
 
