@@ -11,14 +11,15 @@ float solve_expression(char* expr)
 void run(char* expr)
 {
         // display input
-        printf("input: %s\n", expr);
+        //printf("input: %s\n", expr);
 
         // solve expression and store result
         float result;
         result = solve_expression(expr);
 
         // print result
-        printf("output: %f\n", result);
+        //printf("output: %f\n", result);
+        printf("%s = %f\n", expr, result);
 
         return;
 }
