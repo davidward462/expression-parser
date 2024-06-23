@@ -1,10 +1,24 @@
 #include <stdio.h>
 #include "lib.h"
 
-// Solve expression passed as a string, and return the result as a float
+// convert infix expression to reverse polish notation (postfix)
+char* infix_to_reverse_polish(char* expr)
+{
+        return "";
+}
+
+// calculate the result of a reverse polish notation expression
+float solve_reverse_polish(char* expr)
+{
+        return 0.0;
+}
+
+// Solve the infix expression passed as a string, and return the result as a float
 float solve_expression(char* expr)
 {
-        float result = 0.0;
+        // convert
+        char* reverse_polish = infix_to_reverse_polish(expr);
+        float result = solve_reverse_polish(reverse_polish);
         return result;
 }
 
