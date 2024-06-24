@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include "lib.h"
 
+// constants
+#define STACK_SIZE 128
+
+struct stack {
+        int s[STACK_SIZE];
+        int top;
+};
+
 // convert infix expression to postfix (reverse polish notation)
 char* infix_to_postfix(char* expr)
 {
