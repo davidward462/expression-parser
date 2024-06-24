@@ -6,7 +6,17 @@
 // Import user libraries here
 #include "lib.h"
 
-// TODO: test remaining functions
+void test_infix_to_postfix(char* input, char* expected)
+{
+        char* actual = infix_to_postfix(input);
+        assert_is_true(false);
+}
+
+void test_solve_postfix(char* input, float expected)
+{
+        float actual = solve_postfix(input);
+        assert_is_true(false);
+}
 
 // Write unit tests here
 void test_solve_expression(char* input, float expected)
@@ -28,6 +38,10 @@ void run_tests()
         printf("running tests...\n");
 
         // call test functions here
+        test_infix_to_postfix("0", "0");
+
+        test_solve_postfix("0", 0.0);
+
         test_solve_expression("0", 0.0);
         test_solve_expression("1", 1.0);
 
