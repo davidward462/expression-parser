@@ -2,9 +2,6 @@
 #include "lib.h"
 #include <stdbool.h>
 
-// constants
-#define STACK_SIZE 128
-
 // TODO: should the argument be an address to a stack struct?
 bool stack_is_full(stack *s)
 {
