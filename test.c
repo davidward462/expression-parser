@@ -35,7 +35,8 @@ void test_solve_expression(char* input, float expected)
 // Run unit tests for stack
 void test_stack()
 {
-
+        stack s;
+        push(&s, 'a');
 }
 
 // Run unit tests with specific values

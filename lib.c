@@ -5,28 +5,19 @@
 // constants
 #define STACK_SIZE 128
 
-// Stack which holds characters
-struct stack {
-        // array of char which holds elements in stack
-        char s[STACK_SIZE];
-
-        // index of the top of the stack
-        int top;
-};
-
 // TODO: should the argument be an address to a stack struct?
-bool stack_is_full(struct stack *s)
+bool stack_is_full(stack *s)
 {
         return false;
 }
 
 // TODO: what should this return?
-int push(struct stack *s, char c)
+int push(stack *s, char c)
 {
         return 0;
 }
 
-char pop(struct stack *s)
+char pop(stack *s)
 {
         char c = 'a';
         return c;
