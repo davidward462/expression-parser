@@ -32,17 +32,20 @@ void test_solve_expression(char* input, float expected)
         }
 }
 
-void test_push_pop(stack s, char input, char expected)
+void test_push_pop(stack *sp, char input, char expected)
+{
+        push(sp, input);
+        char actual = pop(sp);
+        bool are_equal = (expected == actual);
+        assert_is_true(are_equal);
+}
+
+void test_push(stack *sp, char input)
 {
         assert_is_true(false);
 }
 
-void test_push(stack s, char input)
-{
-        assert_is_true(false);
-}
-
-void test_pop(stack s, char expected)
+void test_pop(stack *sp, char expected)
 {
         assert_is_true(false);
 }
@@ -51,7 +54,7 @@ void test_pop(stack s, char expected)
 void test_stack()
 {
         stack s;
-        push(&s, 'a');
+        test_push_pop(&s, 'a', 'a');
 }
 
 // Run unit tests with specific values

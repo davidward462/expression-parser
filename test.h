@@ -11,11 +11,11 @@ void test_solve_reverse_polish(char* input, char* expected);
 
 void test_solve_expression(char* input, float expected);
 
-void test_push_pop(stack s, char input, char expected);
+void test_push_pop(stack *s, char input, char expected);
 
-void test_push(stack s, char input);
+void test_push(stack *s, char input);
 
-void test_pop(stack s, char expected);
+void test_pop(stack *s, char expected);
 
 void test_stack();
 

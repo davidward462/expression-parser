@@ -16,7 +16,7 @@ int push(stack *s, char c)
 
 char pop(stack *s)
 {
-        char c = 'a';
+        char c = ' ';
         return c;
 }
 
