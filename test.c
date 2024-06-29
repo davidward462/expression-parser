@@ -32,6 +32,21 @@ void test_solve_expression(char* input, float expected)
         }
 }
 
+void test_push_pop(stack s, char input, char expected)
+{
+        assert_is_true(false);
+}
+
+void test_push(stack s, char input)
+{
+        assert_is_true(false);
+}
+
+void test_pop(stack s, char expected)
+{
+        assert_is_true(false);
+}
+
 // Run unit tests for stack
 void test_stack()
 {
