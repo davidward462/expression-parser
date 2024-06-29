@@ -1,13 +1,36 @@
 #include <stdio.h>
 #include "lib.h"
+#include <stdbool.h>
 
 // constants
 #define STACK_SIZE 128
 
+// Stack which holds characters
 struct stack {
-        int s[STACK_SIZE];
+        // array of char which holds elements in stack
+        char s[STACK_SIZE];
+
+        // index of the top of the stack
         int top;
 };
+
+// TODO: should the argument be an address to a stack struct?
+bool stack_is_full(struct stack *s)
+{
+        return false;
+}
+
+// TODO: what should this return?
+int push(struct stack *s, char c)
+{
+        return 0;
+}
+
+char pop(struct stack *s)
+{
+        char c = 'a';
+        return c;
+}
 
 // convert infix expression to postfix (reverse polish notation)
 char* infix_to_postfix(char* expr)
