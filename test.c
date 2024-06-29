@@ -32,6 +32,12 @@ void test_solve_expression(char* input, float expected)
         }
 }
 
+// Run unit tests for stack
+void test_stack()
+{
+
+}
+
 // Run unit tests with specific values
 void run_tests()
 {
@@ -44,6 +50,9 @@ void run_tests()
 
         test_solve_expression("0", 0.0);
         test_solve_expression("1", 1.0);
+
+        // run tests for stack
+        test_stack();
 
         printf("complete.\n");
 }
