@@ -5,7 +5,7 @@
 // Definition for stack which holds characters
 typedef struct {
         // array of char which holds elements in stack
-        char s[4];
+        char s[2];
 
         // index of the top of the stack
         int top;
