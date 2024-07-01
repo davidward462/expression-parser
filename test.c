@@ -32,12 +32,24 @@ void test_solve_expression(char* input, float expected)
         }
 }
 
+void test_stack_is_full(stack *sp, bool expected)
+{
+        bool is_full = stack_is_full(sp);
+        assert_is_true(is_full);
+}
+
 void test_push_pop(stack *sp, char input, char expected)
 {
         push(sp, input);
         char actual = pop(sp);
         bool are_equal = (expected == actual);
+
         assert_is_true(are_equal);
+
+        // Show details if test fails
+        if (!are_equal) {
+                print_expected_actual_char(expected, actual);
+        }
 }
 
 void test_push(stack *sp, char input)

@@ -11,6 +11,8 @@ void test_solve_reverse_polish(char* input, char* expected);
 
 void test_solve_expression(char* input, float expected);
 
+void test_stack_is_full(stack *sp, bool expected);
+
 void test_push_pop(stack *s, char input, char expected);
 
 void test_push(stack *s, char input);

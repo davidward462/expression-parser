@@ -9,7 +9,7 @@ bool stack_is_full(stack *s)
 }
 
 // TODO: what should this return?
-int push(stack *s, char c)
+int push(stack *sp, char c)
 {
         return 0;
 }
