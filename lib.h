@@ -2,10 +2,12 @@
 #ifndef LIB_H
 #define LIB_H
 
+#define STACK_SIZE 2
+
 // Definition for stack which holds characters
 typedef struct {
         // array of char which holds elements in stack
-        char s[2];
+        char s[STACK_SIZE];
 
         // index of the top of the stack
         int top;

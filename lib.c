@@ -6,8 +6,13 @@
 bool stack_is_full(stack *s)
 {
         int index = s->top;
-        printf("top: %d", index);
-        return false;
+        bool is_full = false;
+
+        if (index == STACK_SIZE) {
+                is_full = true;
+        }
+
+        return is_full;
 }
 
 // TODO: what should this return?
