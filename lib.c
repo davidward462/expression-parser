@@ -5,6 +5,8 @@
 // TODO: should the argument be an address to a stack struct?
 bool stack_is_full(stack *s)
 {
+        int index = s->top;
+        printf("top: %d", index);
         return false;
 }
 
