@@ -18,12 +18,13 @@ bool stack_is_full(stack *s)
 // TODO: what should this return?
 int push(stack *sp, char c)
 {
+        sp->s[sp->top] = c;
         return 0;
 }
 
-char pop(stack *s)
+char pop(stack *sp)
 {
-        char c = ' ';
+        char c = sp->s[sp->top];
         return c;
 }
 
