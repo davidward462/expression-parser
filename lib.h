@@ -4,6 +4,7 @@
 
 #define STACK_SIZE 2
 
+
 // Definition for stack which holds characters
 typedef struct {
         // array of char which holds elements in stack
@@ -12,6 +13,8 @@ typedef struct {
         // index of the top of the stack
         int top;
 } stack;
+
+void print_stack(stack *sp);
 
 bool stack_is_full(stack *s);
 

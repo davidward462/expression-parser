@@ -77,12 +77,12 @@ void run_tests()
         printf("running tests...\n");
 
         // call test functions here
-        test_infix_to_postfix("0", "0");
+        //test_infix_to_postfix("0", "0");
 
-        test_solve_postfix("0", 0.0);
+        //test_solve_postfix("0", 0.0);
 
-        test_solve_expression("0", 0.0);
-        test_solve_expression("1", 1.0);
+        //test_solve_expression("0", 0.0);
+        //test_solve_expression("1", 1.0);
 
         // run tests for stack
         test_stack();

@@ -2,6 +2,14 @@
 #include "lib.h"
 #include <stdbool.h>
 
+void print_stack(stack *sp)
+{
+        int t = sp->top;
+        for (int i = t-1; i >= 0; i--) {
+                printf("%c\n", sp->s[i]);
+        }
+}
+
 // TODO: should the argument be an address to a stack struct?
 bool stack_is_full(stack *s)
 {
@@ -19,11 +27,13 @@ bool stack_is_full(stack *s)
 int push(stack *sp, char c)
 {
         sp->s[sp->top] = c;
+        sp->top++;
         return 0;
 }
 
 char pop(stack *sp)
 {
+        sp->top--;
         char c = sp->s[sp->top];
         return c;
 }
