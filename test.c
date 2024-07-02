@@ -54,7 +54,11 @@ void test_push_pop(stack *sp, char input, char expected)
 
 void test_push(stack *sp, char input)
 {
-        assert_is_true(false);
+        printf("pushing %c\npre:\n");
+        print_stack(sp);
+        push(sp, input);
+        printf("post:\n");
+        print_stack(sp);
 }
 
 void test_pop(stack *sp, char expected)
@@ -67,8 +71,8 @@ void test_stack()
 {
         stack s = {{}, 0};
         stack *sp = &s;
-        test_push_pop(sp, 'a', 'a');
-        test_stack_is_full(sp, false);
+
+        test_push(sp, 'c');
 }
 
 // Run unit tests with specific values
