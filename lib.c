@@ -2,6 +2,11 @@
 #include "lib.h"
 #include <stdbool.h>
 
+void init_stack(stack *sp)
+{
+        sp->top = 0;
+}
+
 void print_stack(stack *sp)
 {
         int t = sp->top;
@@ -25,10 +30,11 @@ bool stack_is_full(stack *s)
 
 void push(stack *sp, char c)
 {
-        // TODO: check if stack is full
-        sp->s[sp->top] = c;
-        sp->top++;
-        return 0;
+        // only push if stack is not full, otherwise do nothing
+        if (!stack_is_full(sp)) {
+                sp->s[sp->top] = c;
+                sp->top++;
+        }
 }
 
 char pop(stack *sp)

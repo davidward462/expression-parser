@@ -70,8 +70,9 @@ void test_pop(stack *sp, char expected)
 // Run unit tests for stack
 void test_stack()
 {
-        stack s = {{}, 0};
+        stack s;
         stack *sp = &s;
+        init_stack(sp);
 
         test_push(sp, 'c');
         test_push(sp, '(');
