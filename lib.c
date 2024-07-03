@@ -10,7 +10,7 @@ void print_stack(stack *sp)
         }
 }
 
-// TODO: should the argument be an address to a stack struct?
+// return true if stack is full, false otherwise
 bool stack_is_full(stack *s)
 {
         int index = s->top;
@@ -23,9 +23,9 @@ bool stack_is_full(stack *s)
         return is_full;
 }
 
-// TODO: what should this return?
-int push(stack *sp, char c)
+void push(stack *sp, char c)
 {
+        // TODO: check if stack is full
         sp->s[sp->top] = c;
         sp->top++;
         return 0;
@@ -33,6 +33,7 @@ int push(stack *sp, char c)
 
 char pop(stack *sp)
 {
+        // TODO: check if stack is empty
         sp->top--;
         char c = sp->s[sp->top];
         return c;
