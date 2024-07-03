@@ -14,11 +14,13 @@ typedef struct {
         int top;
 } stack;
 
+void init_stack(stack *sp);
+
 void print_stack(stack *sp);
 
 bool stack_is_full(stack *s);
 
-int push(stack *s, char c);
+void push(stack *s, char c);
 
 char pop(stack *s);
 
