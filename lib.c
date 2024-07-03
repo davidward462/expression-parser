@@ -4,7 +4,8 @@
 
 void init_stack(stack *sp)
 {
-        sp->top = 0;
+        // -1 means the stack is empty
+        sp->top = -1;
 }
 
 void print_stack(stack *sp)
@@ -15,34 +16,44 @@ void print_stack(stack *sp)
         }
 }
 
+bool stack_is_empty(stack *sp)
+{
+        // if the value is -1, the stack is empty. Otherwise it is not empty.
+        return (sp->top == -1);
+}
+
 // return true if stack is full, false otherwise
 bool stack_is_full(stack *s)
 {
-        int index = s->top;
-        bool is_full = false;
+        int top = s->top;
 
-        if (index == STACK_SIZE) {
-                is_full = true;
+        // STACK_SIZE is the number of items that can be stored in the stack.
+        // The value of top will always one below the number of items in the stack.
+        if (top == STACK_SIZE-1) {
+                return true;
         }
-
-        return is_full;
+        else {
+                return false;
+        }
 }
 
 void push(stack *sp, char c)
 {
         // only push if stack is not full, otherwise do nothing
         if (!stack_is_full(sp)) {
-                sp->s[sp->top] = c;
                 sp->top++;
+                sp->s[sp->top] = c;
         }
 }
 
+// TODO: what should pop return from an empty stack?
 char pop(stack *sp)
 {
-        // TODO: check if stack is empty
-        sp->top--;
-        char c = sp->s[sp->top];
-        return c;
+        if (!stack_is_empty(sp)) {
+                char c = sp->s[sp->top];
+                sp->top--;
+                return c;
+        }
 }
 
 // convert infix expression to postfix (reverse polish notation)
