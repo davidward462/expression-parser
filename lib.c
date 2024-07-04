@@ -11,7 +11,8 @@ void init_stack(stack *sp)
 void print_stack(stack *sp)
 {
         int t = sp->top;
-        for (int i = t-1; i >= 0; i--) {
+        // go through the array in reverse starting at 'top' value and print each
+        for (int i = t; i >= 0; i--) {
                 printf("%c\n", sp->s[i]);
         }
 }
@@ -48,9 +49,14 @@ void push(stack *sp, char c)
 char pop(stack *sp)
 {
         if (!stack_is_empty(sp)) {
+                // access array 's' at position of 'top'
                 char c = sp->s[sp->top];
                 sp->top--;
                 return c;
+        }
+        else {
+                // TODO: probably don't do this
+                return '\0';
         }
 }
 
