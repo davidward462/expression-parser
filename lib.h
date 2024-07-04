@@ -30,6 +30,6 @@ float solve_postfix(char* expr);
 
 float solve_expression(char* expr);
 
-void run();
+void run(char* expr);
 
 #endif

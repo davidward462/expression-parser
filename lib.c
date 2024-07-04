@@ -25,11 +25,9 @@ bool stack_is_empty(stack *sp)
 // return true if stack is full, false otherwise
 bool stack_is_full(stack *s)
 {
-        int top = s->top;
-
         // STACK_SIZE is the number of items that can be stored in the stack.
         // The value of top will always one below the number of items in the stack.
-        if (top == STACK_SIZE-1) {
+        if (s->top == STACK_SIZE-1) {
                 return true;
         }
         else {

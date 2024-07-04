@@ -54,16 +54,18 @@ void test_push_pop(stack *sp, char input, char expected)
 
 void test_push(stack *sp, char input)
 {
-        printf("pushing %c\n", input);
+        printf("push(%c)\n", input);
         push(sp, input);
         print_stack(sp);
+        // verify the test by looking at the output alone
 }
 
 void test_pop(stack *sp, char expected)
 {
         char actual = pop(sp);
-        printf("popped %c\n", actual);
+        printf("pop() -> %c\n", actual);
         print_stack(sp);
+        // test passes if the value popped is what we expected
         assert_is_true((expected == actual));
 }
 
@@ -73,6 +75,7 @@ void test_stack()
         stack s;
         stack *sp = &s;
         init_stack(sp);
+        test_push(sp, 'a');
 }
 
 // Run unit tests with specific values
