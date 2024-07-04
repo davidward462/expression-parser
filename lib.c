@@ -20,7 +20,15 @@ void print_stack(stack *sp)
 bool stack_is_empty(stack *sp)
 {
         // if the value is -1, the stack is empty. Otherwise it is not empty.
-        return (sp->top == -1);
+        bool is_empty = (sp->top == -1);
+        if (is_empty) {
+                // print for testing only
+                printf("stack is empty\n");
+                return true;
+        }
+        else {
+                return false;
+        }
 }
 
 // return true if stack is full, false otherwise
@@ -29,6 +37,8 @@ bool stack_is_full(stack *s)
         // STACK_SIZE is the number of items that can be stored in the stack.
         // The value of top will always one below the number of items in the stack.
         if (s->top == STACK_SIZE-1) {
+                // print for testing only
+                printf("stack is full\n");
                 return true;
         }
         else {
