@@ -72,7 +72,7 @@ char pop(stack *sp)
         }
         else {
                 // TODO: probably don't do this
-                return '\0';
+                return STACK_EMPTY;
         }
 }
 
@@ -85,7 +85,7 @@ char peek(stack *sp)
         }
         else {
                 // TODO: probably don't do this
-                return '\0';
+                return STACK_EMPTY;
         }
 }
 

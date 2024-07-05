@@ -87,9 +87,9 @@ void test_stack()
         test_push(sp, 'c');
         test_pop(sp, 'b');
         test_pop(sp, 'a');
-        test_pop(sp, '\0');
-        test_pop(sp, '\0');
-        test_peek(sp, '\0');
+        test_pop(sp, STACK_EMPTY);
+        test_pop(sp, STACK_EMPTY);
+        test_peek(sp, STACK_EMPTY);
 }
 
 // Run unit tests with specific values
