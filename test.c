@@ -69,6 +69,12 @@ void test_pop(stack *sp, char expected)
         assert_is_true((expected == actual));
 }
 
+void test_peek(stack *sp, char expected)
+{
+        char actual = peek(sp);
+        assert_is_true((expected == actual));
+}
+
 // Run unit tests for stack
 void test_stack()
 {
@@ -77,11 +83,13 @@ void test_stack()
         init_stack(sp);
         test_push(sp, 'a');
         test_push(sp, 'b');
+        test_peek(sp, 'b');
         test_push(sp, 'c');
         test_pop(sp, 'b');
         test_pop(sp, 'a');
         test_pop(sp, '\0');
         test_pop(sp, '\0');
+        test_peek(sp, '\0');
 }
 
 // Run unit tests with specific values
