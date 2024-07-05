@@ -8,15 +8,6 @@ void init_stack(stack *sp)
         sp->top = -1;
 }
 
-void print_stack(stack *sp)
-{
-        int t = sp->top;
-        // go through the array in reverse starting at 'top' value and print each
-        for (int i = t; i >= 0; i--) {
-                printf("%c\n", sp->s[i]);
-        }
-}
-
 bool stack_is_empty(stack *sp)
 {
         // if the value is -1, the stack is empty. Otherwise it is not empty.
@@ -44,6 +35,21 @@ bool stack_is_full(stack *s)
         else {
                 return false;
         }
+}
+
+void print_stack(stack *sp)
+{
+        int t = sp->top;
+        // go through the array in reverse starting at 'top' value and print each
+        if (!stack_is_empty(sp)) {
+                for (int i = t; i >= 0; i--) {
+                        printf("|%c|\n", sp->s[i]);
+                }
+        }
+        else {
+                printf("| |\n");
+        }
+        
 }
 
 void push(stack *sp, char c)
