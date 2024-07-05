@@ -18,11 +18,13 @@ void init_stack(stack *sp);
 
 void print_stack(stack *sp);
 
-bool stack_is_full(stack *s);
+bool stack_is_full(stack *sp);
 
-void push(stack *s, char c);
+void push(stack *sp, char c);
 
-char pop(stack *s);
+char pop(stack *sp);
+
+char peek(stack *sp);
 
 char* infix_to_postfix(char* expr);
 

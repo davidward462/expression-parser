@@ -23,11 +23,11 @@ bool stack_is_empty(stack *sp)
 }
 
 // return true if stack is full, false otherwise
-bool stack_is_full(stack *s)
+bool stack_is_full(stack *sp)
 {
         // STACK_SIZE is the number of items that can be stored in the stack.
         // The value of top will always one below the number of items in the stack.
-        if (s->top == STACK_SIZE-1) {
+        if (sp->top == STACK_SIZE-1) {
                 // print for testing only
                 printf("stack is full\n");
                 return true;
@@ -68,6 +68,19 @@ char pop(stack *sp)
                 // access array 's' at position of 'top'
                 char c = sp->s[sp->top];
                 sp->top--;
+                return c;
+        }
+        else {
+                // TODO: probably don't do this
+                return '\0';
+        }
+}
+
+char peek(stack *sp)
+{
+        if (!stack_is_empty(sp)) {
+                // access array 's' at position of 'top'
+                char c = sp->s[sp->top];
                 return c;
         }
         else {
