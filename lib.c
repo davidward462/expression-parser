@@ -49,7 +49,6 @@ void print_stack(stack *sp)
         else {
                 printf("| |\n");
         }
-        
 }
 
 void push(stack *sp, char c)
