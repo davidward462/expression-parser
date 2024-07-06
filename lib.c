@@ -2,12 +2,16 @@
 #include "lib.h"
 #include <stdbool.h>
 
+// Stack functions
+
+// Initialize stack 
 void init_stack(stack *sp)
 {
         // -1 means the stack is empty
         sp->top = -1;
 }
 
+// Return true if stack is empty, false otherwise 
 bool stack_is_empty(stack *sp)
 {
         // if the value is -1, the stack is empty. Otherwise it is not empty.
@@ -75,6 +79,7 @@ char pop(stack *sp)
         }
 }
 
+// Return top character, but don't modify stack
 char peek(stack *sp)
 {
         if (!stack_is_empty(sp)) {

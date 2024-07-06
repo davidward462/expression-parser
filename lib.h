@@ -25,6 +25,7 @@ typedef struct {
         int rear;
 } queue;
 
+// stack functions
 void init_stack(stack *sp);
 
 void print_stack(stack *sp);
@@ -36,6 +37,8 @@ void push(stack *sp, char c);
 char pop(stack *sp);
 
 char peek(stack *sp);
+
+// queue functions
 
 char* infix_to_postfix(char* expr);
 
