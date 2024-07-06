@@ -13,8 +13,6 @@ bool stack_is_empty(stack *sp)
         // if the value is -1, the stack is empty. Otherwise it is not empty.
         bool is_empty = (sp->top == -1);
         if (is_empty) {
-                // print for testing only
-                printf("stack is empty\n");
                 return true;
         }
         else {
@@ -28,8 +26,6 @@ bool stack_is_full(stack *sp)
         // STACK_SIZE is the number of items that can be stored in the stack.
         // The value of top will always one below the number of items in the stack.
         if (sp->top == STACK_SIZE-1) {
-                // print for testing only
-                printf("stack is full\n");
                 return true;
         }
         else {
@@ -58,6 +54,9 @@ void push(stack *sp, char c)
                 sp->top++;
                 sp->s[sp->top] = c;
         }
+        else {
+                printf("stack is full\n");
+        }
 }
 
 // TODO: what should pop return from an empty stack?
@@ -71,6 +70,7 @@ char pop(stack *sp)
         }
         else {
                 // TODO: probably don't do this
+                printf("stack is empty\n");
                 return STACK_EMPTY;
         }
 }
