@@ -72,6 +72,7 @@ void test_pop(stack *sp, char expected)
 void test_peek(stack *sp, char expected)
 {
         char actual = peek(sp);
+        printf("peek() -> %c\n");
         assert_is_true((expected == actual));
 }
 
@@ -81,9 +82,13 @@ void test_stack()
         stack s;
         stack *sp = &s;
         init_stack(sp);
+
+        test_peek(sp, STACK_EMPTY);
         for (int i = 0; i < 9; i++) {
                 test_push(sp, 'k');
         }
+
+        test_peek(sp, 'k');
 
         for(int i = 0; i < 8; i++) {
                 test_pop(sp, 'k');
