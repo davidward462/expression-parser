@@ -28,9 +28,11 @@ typedef struct {
 // stack functions
 void init_stack(stack *sp);
 
-void print_stack(stack *sp);
+bool stack_is_empty(stack *sp);
 
 bool stack_is_full(stack *sp);
+
+void print_stack(stack *sp);
 
 void push(stack *sp, char c);
 
