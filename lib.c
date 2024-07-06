@@ -93,6 +93,15 @@ char peek(stack *sp)
         }
 }
 
+// Queue functions
+
+// Initialize queue
+void init_queue(queue *qp)
+{
+        qp->front = -1;
+        qp->rear = -1;
+}
+
 // convert infix expression to postfix (reverse polish notation)
 char* infix_to_postfix(char* expr)
 {
