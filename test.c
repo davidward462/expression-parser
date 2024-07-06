@@ -81,13 +81,15 @@ void test_stack()
         stack s;
         stack *sp = &s;
         init_stack(sp);
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 9; i++) {
                 test_push(sp, 'k');
         }
 
-        for(int i = 0; i < 2; i++) {
+        for(int i = 0; i < 8; i++) {
                 test_pop(sp, 'k');
         }
+        test_pop(sp, STACK_EMPTY);
+        test_pop(sp, STACK_EMPTY);
 }
 
 // Run unit tests with specific values
