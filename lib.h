@@ -3,6 +3,7 @@
 #define LIB_H
 
 #define STACK_SIZE 8
+#define QUEUE_SIZE 2
 #define STACK_EMPTY '\0'
 
 // Definition for stack which holds characters
@@ -13,6 +14,16 @@ typedef struct {
         // index of the top of the stack
         int top;
 } stack;
+
+// Definition for queue which holds char
+typedef struct {
+        // array which holds the characters in the queue
+        char q[QUEUE_SIZE];
+
+        //indexes for front and rear of queue
+        int front;
+        int rear;
+} queue;
 
 void init_stack(stack *sp);
 
