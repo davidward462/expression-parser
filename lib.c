@@ -103,6 +103,7 @@ void init_queue(queue *qp)
 }
 
 // Return true if queue is empty, false otherwise
+// TODO: Test this
 bool queue_is_empty(queue *qp)
 {
         // if both front and back pointers are -1
@@ -118,7 +119,20 @@ bool queue_is_empty(queue *qp)
 // Return true if queue if is full, false otherwise
 bool queue_is_full(queue *qp)
 {
+        // TODO: add body
         return false;
+}
+
+void enqueue(queue *qp)
+{
+        // TODO: add body
+}
+
+char dequeue(queue *qp)
+{
+        // TODO: add body
+        char c = '\0';
+        return c;
 }
 
 // convert infix expression to postfix (reverse polish notation)
