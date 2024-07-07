@@ -21,6 +21,8 @@ void test_pop(stack *s, char expected);
 
 void test_stack();
 
+void test_queue();
+
 void run_tests();
 
 #endif

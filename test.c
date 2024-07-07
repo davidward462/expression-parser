@@ -72,7 +72,7 @@ void test_pop(stack *sp, char expected)
 void test_peek(stack *sp, char expected)
 {
         char actual = peek(sp);
-        printf("peek() -> %c\n");
+        printf("peek() -> %c\n", actual);
         assert_is_true((expected == actual));
 }
 
@@ -97,6 +97,11 @@ void test_stack()
         test_pop(sp, STACK_EMPTY);
 }
 
+void test_queue()
+{
+        
+}
+
 // Run unit tests with specific values
 void run_tests()
 {
@@ -112,6 +117,9 @@ void run_tests()
 
         // run tests for stack
         test_stack();
+
+        // run tests for queue
+        test_queue();
 
         printf("complete.\n");
 }
