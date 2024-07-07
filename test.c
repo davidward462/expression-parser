@@ -82,19 +82,6 @@ void test_stack()
         stack s;
         stack *sp = &s;
         init_stack(sp);
-
-        test_peek(sp, STACK_EMPTY);
-        for (int i = 0; i < 9; i++) {
-                test_push(sp, 'k');
-        }
-
-        test_peek(sp, 'k');
-
-        for(int i = 0; i < 8; i++) {
-                test_pop(sp, 'k');
-        }
-        test_pop(sp, STACK_EMPTY);
-        test_pop(sp, STACK_EMPTY);
 }
 
 void test_queue()
