@@ -135,6 +135,13 @@ char dequeue(queue *qp)
         return c;
 }
 
+char peek_queue(queue *qp)
+{
+        // TODO: add body
+        char c = '\0';
+        return c;
+}
+
 // convert infix expression to postfix (reverse polish notation)
 char* infix_to_postfix(char* expr)
 {
