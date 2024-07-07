@@ -42,6 +42,16 @@ char peek(stack *sp);
 
 // queue functions
 
+void init_queue(queue *qp);
+
+bool queue_is_empty(queue *qp);
+
+bool queue_is_full(queue *qp);
+
+void enqueue(queue *qp);
+
+char dequeue(queue *qp);
+
 char* infix_to_postfix(char* expr);
 
 float solve_postfix(char* expr);
