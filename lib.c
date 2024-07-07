@@ -102,6 +102,25 @@ void init_queue(queue *qp)
         qp->rear = -1;
 }
 
+// Return true if queue is empty, false otherwise
+bool queue_is_empty(queue *qp)
+{
+        // if both front and back pointers are -1
+        if ((qp->front == -1) && (qp->rear == -1)) {
+                // the queue is empty
+                return true;
+        }
+        else {
+                return false;
+        }
+}
+
+// Return true if queue if is full, false otherwise
+bool queue_is_full(queue *qp)
+{
+        return false;
+}
+
 // convert infix expression to postfix (reverse polish notation)
 char* infix_to_postfix(char* expr)
 {
