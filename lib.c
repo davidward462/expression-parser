@@ -59,7 +59,7 @@ void push(stack *sp, char c)
                 sp->s[sp->top] = c;
         }
         else {
-                printf("stack is full\n");
+                //printf("stack is full\n");
         }
 }
 
@@ -74,7 +74,7 @@ char pop(stack *sp)
         }
         else {
                 // TODO: probably don't do this
-                printf("stack is empty\n");
+                //printf("stack is empty\n");
                 return STACK_EMPTY;
         }
 }

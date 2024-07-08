@@ -89,6 +89,17 @@ void test_stack()
         stack *sp = &s;
         init_stack(sp);
         test_stack_is_full(sp, false);
+        test_stack_is_empty(sp, true);
+        push(sp, 'c');
+        test_stack_is_empty(sp, false);
+        for (int i = 0; i < 20; i++) {
+                push(sp, 'a');
+        }
+        test_stack_is_full(sp, true);
+        for(int i = 0; i < 30; i++) {
+                pop(sp);
+        }
+        test_stack_is_empty(sp, true);
 }
 
 void test_queue()
