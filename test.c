@@ -34,8 +34,14 @@ void test_solve_expression(char* input, float expected)
 
 void test_stack_is_full(stack *sp, bool expected)
 {
-        bool is_full = stack_is_full(sp);
-        assert_is_true(is_full);
+        bool actual = stack_is_full(sp);
+        assert_is_true((expected == actual));
+}
+
+void test_stack_is_empty(stack *sp, bool expected)
+{
+        bool actual = stack_is_empty(sp);
+        assert_is_true((expected == actual));
 }
 
 void test_push_pop(stack *sp, char input, char expected)
@@ -82,6 +88,7 @@ void test_stack()
         stack s;
         stack *sp = &s;
         init_stack(sp);
+        test_stack_is_full(sp, false);
 }
 
 void test_queue()
