@@ -32,6 +32,7 @@ void test_solve_expression(char* input, float expected)
         }
 }
 
+// Test stack
 void test_stack_is_full(stack *sp, bool expected)
 {
         bool actual = stack_is_full(sp);
@@ -82,6 +83,14 @@ void test_peek(stack *sp, char expected)
         assert_is_true((expected == actual));
 }
 
+// Test queue
+
+void test_queue_is_empty(queue *qp, bool expected)
+{
+        bool actual = queue_is_empty(qp);
+        assert_is_true((actual == expected));
+}
+
 // Run unit tests for stack
 void test_stack()
 {
@@ -104,7 +113,10 @@ void test_stack()
 
 void test_queue()
 {
-        
+        queue q;
+        queue *qp = &q;
+        init_queue(qp);
+        test_queue_is_empty(qp, true);
 }
 
 // Run unit tests with specific values
