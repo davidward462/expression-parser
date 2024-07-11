@@ -19,6 +19,10 @@ void test_push(stack *s, char input);
 
 void test_pop(stack *s, char expected);
 
+void test_peek(stack *sp, char expected);
+
+void test_queue_is_empty(queue *qp, bool expected);
+
 void test_stack();
 
 void test_queue();
