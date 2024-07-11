@@ -83,14 +83,6 @@ void test_peek(stack *sp, char expected)
         assert_is_true((expected == actual));
 }
 
-// Test queue
-
-void test_queue_is_empty(queue *qp, bool expected)
-{
-        bool actual = queue_is_empty(qp);
-        assert_is_true((actual == expected));
-}
-
 // Run unit tests for stack
 void test_stack()
 {
@@ -111,6 +103,21 @@ void test_stack()
         test_stack_is_empty(sp, true);
 }
 
+// Test queue
+
+void test_queue_is_empty(queue *qp, bool expected)
+{
+        bool actual = queue_is_empty(qp);
+        assert_is_true((expected == actual));
+}
+
+void test_queue_is_full(queue *qp, bool expected)
+{
+        bool actual = queue_is_full(qp);
+        assert_is_true((expected == actual));
+}
+
+// Run tests for queue
 void test_queue()
 {
         queue q;
