@@ -48,7 +48,7 @@ bool queue_is_empty(queue *qp);
 
 bool queue_is_full(queue *qp);
 
-void enqueue(queue *qp);
+void enqueue(queue *qp, char c);
 
 char dequeue(queue *qp);
 

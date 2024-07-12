@@ -123,9 +123,20 @@ bool queue_is_full(queue *qp)
         return false;
 }
 
-void enqueue(queue *qp)
+void enqueue(queue *qp, char c)
 {
         // TODO: add body
+        if (!queue_is_full(qp)) {
+                // if this is the first element added
+                if(front == -1) {
+                        front = 0;
+                }
+
+                // increment rear pointer to indicate next space
+                rear++;
+                // add item to queue
+                qp->q[rear] = c;
+        }
 }
 
 char dequeue(queue *qp)
