@@ -23,6 +23,8 @@ void test_peek(stack *sp, char expected);
 
 void test_queue_is_empty(queue *qp, bool expected);
 
+void test_enqueue(queue *qp)
+
 void test_stack();
 
 void test_queue();

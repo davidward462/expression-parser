@@ -117,6 +117,11 @@ void test_queue_is_full(queue *qp, bool expected)
         assert_is_true((expected == actual));
 }
 
+void test_enqueue(queue *qp)
+{
+        assert_is_true(false);
+}
+
 // Run tests for queue
 void test_queue()
 {
