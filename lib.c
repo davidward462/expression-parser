@@ -123,6 +123,23 @@ bool queue_is_full(queue *qp)
         return false;
 }
 
+void print_queue(queue *qp)
+{
+        // get indexes for front and rear of queue
+        int f = qp->front;
+        int r = qp->rear;
+
+        if (!queue_is_empty(qp)) {
+                // go through the array starting at 'front' value and print each until 'rear'
+                for (int i = f; i >= r; i++) {
+                        printf("_%c", qp->q[i]);
+                }
+        }
+        else {
+                printf("__ \n");
+        }
+}
+
 void enqueue(queue *qp, char c)
 {
         // TODO: add body
