@@ -128,14 +128,14 @@ void enqueue(queue *qp, char c)
         // TODO: add body
         if (!queue_is_full(qp)) {
                 // if this is the first element added
-                if(front == -1) {
-                        front = 0;
+                if(qp->front == -1) {
+                        qp->front = 0;
                 }
 
                 // increment rear pointer to indicate next space
-                rear++;
+                qp->rear++;
                 // add item to queue
-                qp->q[rear] = c;
+                qp->q[qp->rear] = c;
         }
 }
 
