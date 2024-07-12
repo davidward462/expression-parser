@@ -129,6 +129,7 @@ void test_queue()
         queue *qp = &q;
         init_queue(qp);
         test_queue_is_empty(qp, true);
+        print_queue(qp);
 }
 
 // Run unit tests with specific values
