@@ -120,7 +120,12 @@ bool queue_is_empty(queue *qp)
 bool queue_is_full(queue *qp)
 {
         // TODO: add body
-        return false;
+        if (qp->rear == QUEUE_SIZE-1) {
+                return true;
+        }
+        else {
+                return false;
+        }
 }
 
 void print_queue(queue *qp)
@@ -131,12 +136,13 @@ void print_queue(queue *qp)
 
         if (!queue_is_empty(qp)) {
                 // go through the array starting at 'front' value and print each until 'rear'
-                for (int i = f; i >= r; i++) {
-                        printf("_%c", qp->q[i]);
+                for (int i = f; i <= r; i++) {
+                        printf("%c ", qp->q[i]);
                 }
+                printf("\n");
         }
         else {
-                printf("__ \n");
+                printf("_ \n");
         }
 }
 
