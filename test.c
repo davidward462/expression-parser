@@ -134,6 +134,10 @@ void test_queue()
         print_queue(qp);
         test_queue_is_empty(qp, false);
         test_queue_is_full(qp, true);
+        enqueue(qp, 'c');
+        print_queue(qp);
+        test_queue_is_empty(qp, false);
+        test_queue_is_full(qp, true);
 }
 
 // Run unit tests with specific values
