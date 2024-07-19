@@ -9,6 +9,7 @@
 void test_infix_to_postfix(char* input, char* expected)
 {
         char* actual = infix_to_postfix(input);
+        // TODO: need to be able to compare strings
         assert_is_true(false);
 }
 
@@ -160,13 +161,18 @@ void test_queue()
         test_dequeue(qp, '\0');
 }
 
+// Tests for converting infix notation to postfix
+void infix_to_postfix_test_cases()
+{
+        test_infix_to_postfix("0", "0");
+}
+
 // Run unit tests with specific values
 void run_tests()
 {
         printf("running tests...\n");
 
         // call test functions here
-        //test_infix_to_postfix("0", "0");
 
         //test_solve_postfix("0", 0.0);
 
@@ -178,6 +184,9 @@ void run_tests()
 
         // run tests for queue
         test_queue();
+
+        // run tests for infix to postfix conversion
+        infix_to_postfix_test_cases();
 
         printf("complete.\n");
 }
