@@ -148,7 +148,6 @@ void print_queue(queue *qp)
 
 void enqueue(queue *qp, char c)
 {
-        // TODO: add body
         if (!queue_is_full(qp)) {
                 // if this is the first element added
                 if(qp->front == -1) {
@@ -162,10 +161,14 @@ void enqueue(queue *qp, char c)
         }
 }
 
+// Dequeue a char from the queue and return it
 char dequeue(queue *qp)
 {
-        // TODO: add body
         char c = '\0';
+        // if queue not empty
+        if (!queue_is_empty(qp)) {
+                // if this is the only element in the queue
+        }
         return c;
 }
 
