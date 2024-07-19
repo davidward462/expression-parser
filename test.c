@@ -136,6 +136,14 @@ void repeat_enqueue(queue *qp, char c, int count)
         }
 }
 
+void repeat_dequeue(queue *qp, int count)
+{
+        char c;
+        for (int i = 0; i < count; i++) {
+                c = dequeue(qp);
+        }
+}
+
 // Run tests for queue
 void test_queue()
 {
@@ -143,12 +151,15 @@ void test_queue()
         queue *qp = &q;
         init_queue(qp);
         test_queue_is_empty(qp, true);
+        test_dequeue(qp, '\0');
         repeat_enqueue(qp, 'a', 4);
-        repeat_enqueue(qp, 'b', 4);
+        repeat_enqueue(qp, 'b', 5);
         test_queue_is_full(qp, true);
         print_queue(qp);
-        test_dequeue(qp, 'a');
+        repeat_dequeue(qp, 37);
+        test_queue_is_empty(qp, true);
         print_queue(qp);
+        test_dequeue(qp, '\0');
 }
 
 // Run unit tests with specific values
