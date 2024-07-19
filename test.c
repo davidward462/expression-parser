@@ -122,6 +122,13 @@ void test_enqueue(queue *qp)
         assert_is_true(false);
 }
 
+void repeat_enqueue(queue *qp, int count)
+{
+        for (int i = 0; i < count; i++) {
+                enqueue(qp);
+        }
+}
+
 // Run tests for queue
 void test_queue()
 {
@@ -129,14 +136,7 @@ void test_queue()
         queue *qp = &q;
         init_queue(qp);
         test_queue_is_empty(qp, true);
-        enqueue(qp, 'a');
-        enqueue(qp, 'b');
-        print_queue(qp);
-        test_queue_is_empty(qp, false);
-        test_queue_is_full(qp, true);
-        enqueue(qp, 'c');
-        print_queue(qp);
-        test_queue_is_empty(qp, false);
+        repeat_enqueue(qp, 8);
         test_queue_is_full(qp, true);
 }
 

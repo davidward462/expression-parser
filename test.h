@@ -25,6 +25,8 @@ void test_queue_is_empty(queue *qp, bool expected);
 
 void test_enqueue(queue *qp);
 
+void repeat_enqueue(queue *qp, int count)
+
 void test_stack();
 
 void test_queue();
