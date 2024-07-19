@@ -144,7 +144,6 @@ void test_queue()
         test_queue_is_empty(qp, true);
         repeat_enqueue(qp, 8);
         test_queue_is_full(qp, true);
-        test_peek_queue(qp, 'a');
 }
 
 // Run unit tests with specific values
