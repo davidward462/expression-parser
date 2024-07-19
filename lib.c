@@ -149,7 +149,7 @@ void print_queue(queue *qp)
 void enqueue(queue *qp, char c)
 {
         if (!queue_is_full(qp)) {
-                // if this is the first element added
+                // if this is the first elemet adde
                 if(qp->front == -1) {
                         qp->front = 0;
                 }
@@ -165,9 +165,28 @@ void enqueue(queue *qp, char c)
 char dequeue(queue *qp)
 {
         char c = '\0';
+        int f = qp->front;
+        int r = qp->rear;
+
         // if queue not empty
         if (!queue_is_empty(qp)) {
-                // if this is the only element in the queue
+
+                // get the front item in the queue
+                c = qp->q[f];
+
+                // shift items
+                for (int i = 0; i < r; i++) {
+                         char next = qp->q[i+1];
+                         qp->q[i] = next;
+                }
+
+                if (r == 0) {
+                        // there had been only one element in the queue
+                        qp->front = -1;
+                }
+
+                // decrement rear index
+                qp->rear--;
         }
         return c;
 }
