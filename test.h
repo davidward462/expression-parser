@@ -23,7 +23,7 @@ void test_peek(stack *sp, char expected);
 
 void test_queue_is_empty(queue *qp, bool expected);
 
-void test_enqueue(queue *qp);
+void test_dequeue(queue *qp, char expected);
 
 void repeat_enqueue(queue *qp, char c, int count);
 

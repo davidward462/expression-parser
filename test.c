@@ -117,9 +117,10 @@ void test_queue_is_full(queue *qp, bool expected)
         assert_is_true((expected == actual));
 }
 
-void test_enqueue(queue *qp)
+void test_dequeue(queue *qp, char expected)
 {
-        assert_is_true(false);
+        char actual = dequeue(qp);
+        assert_is_true((expected == actual));
 }
 
 void test_peek_queue(queue *qp, char expected)
@@ -145,6 +146,8 @@ void test_queue()
         repeat_enqueue(qp, 'a', 4);
         repeat_enqueue(qp, 'b', 4);
         test_queue_is_full(qp, true);
+        print_queue(qp);
+        test_dequeue(qp, 'a');
         print_queue(qp);
 }
 
