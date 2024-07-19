@@ -122,10 +122,16 @@ void test_enqueue(queue *qp)
         assert_is_true(false);
 }
 
+void test_peek_queue(queue *qp, char expected)
+{
+        char actual = peek_queue(qp);
+        assert_is_true((expected == actual));
+}
+
 void repeat_enqueue(queue *qp, int count)
 {
         for (int i = 0; i < count; i++) {
-                enqueue(qp);
+                enqueue(qp, 'a');
         }
 }
 
@@ -138,6 +144,7 @@ void test_queue()
         test_queue_is_empty(qp, true);
         repeat_enqueue(qp, 8);
         test_queue_is_full(qp, true);
+        test_peek_queue(qp, 'a');
 }
 
 // Run unit tests with specific values
