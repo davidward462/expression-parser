@@ -155,10 +155,8 @@ void test_queue()
         repeat_enqueue(qp, 'a', 4);
         repeat_enqueue(qp, 'b', 5);
         test_queue_is_full(qp, true);
-        print_queue(qp);
         repeat_dequeue(qp, 37);
         test_queue_is_empty(qp, true);
-        print_queue(qp);
         test_dequeue(qp, '\0');
 }
 
