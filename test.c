@@ -171,6 +171,10 @@ void infix_to_postfix_test_cases()
 void test_parse()
 {
         test_solve_postfix("0", 0.0);
+        test_solve_postfix("3 5 +", 8.0);
+        test_solve_postfix("6 5 -", 1.0);
+        test_solve_postfix("2 5 + 3 *", 21.0);
+        test_solve_postfix("10.0 9 -", 1.0);
 }
 
 // Run unit tests with specific values
