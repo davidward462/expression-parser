@@ -5,6 +5,7 @@
 
 // Import user libraries here
 #include "lib.h"
+#include "parse.h"
 
 void test_infix_to_postfix(char* input, char* expected)
 {

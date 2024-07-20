@@ -1,14 +1,14 @@
 all: main test
 
 # Include user header files if needed
-main: main.o lib.o
-	gcc -o main main.o lib.o
+main: main.o lib.o parse.o
+	gcc -o main main.o lib.o parse.o
 
 main.o: main.c
 	gcc -c main.c
 
-test: test.o test_lib.o lib.o
-	gcc -o test test.o test_lib.o lib.o
+test: test.o test_lib.o lib.o parse.o
+	gcc -o test test.o test_lib.o lib.o parse.o
 
 # Include user header files if needed
 test.o: test.c test.h test_lib.h
@@ -20,6 +20,9 @@ test_lib.o: test_lib.c test_lib.h
 # Add rules for user files here
 lib.o: lib.c lib.h
 	gcc -c lib.c
+
+parse.o: parse.c parse.h
+	gcc -c parse.c
 
 clean:
 	rm $(wildcard *.o)

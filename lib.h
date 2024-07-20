@@ -56,12 +56,4 @@ char dequeue(queue *qp);
 
 char peek_queue(queue *qp);
 
-char* infix_to_postfix(char* expr);
-
-float solve_postfix(char* expr);
-
-float solve_expression(char* expr);
-
-void run(char* expr);
-
 #endif
