@@ -21,7 +21,7 @@ test_lib.o: test_lib.c test_lib.h
 lib.o: lib.c lib.h
 	gcc -c lib.c
 
-parse.o: parse.c parse.h
+parse.o: parse.c parse.h lib.h
 	gcc -c parse.c
 
 clean:

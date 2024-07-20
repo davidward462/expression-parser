@@ -1,10 +1,13 @@
 #include <stdio.h>
 #include "parse.h"
+#include "lib.h"
 
 // convert infix expression to postfix (reverse polish notation)
 char* infix_to_postfix(char* expr)
 {
         // Do the shunting-yard algorithm
+        stack s;
+        queue q;
         return "";
 }
 
