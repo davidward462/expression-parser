@@ -201,6 +201,7 @@ char peek_queue(queue *qp)
 // convert infix expression to postfix (reverse polish notation)
 char* infix_to_postfix(char* expr)
 {
+        // Do the shunting-yard algorithm
         return "";
 }
 
