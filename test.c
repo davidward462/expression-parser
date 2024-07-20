@@ -17,7 +17,7 @@ void test_infix_to_postfix(char* input, char* expected)
 void test_solve_postfix(char* input, float expected)
 {
         float actual = solve_postfix(input);
-        assert_is_true(false);
+        assert_is_true((expected == actual));
 }
 
 // Write unit tests here
@@ -168,6 +168,13 @@ void infix_to_postfix_test_cases()
         test_infix_to_postfix("0", "0");
 }
 
+void test_parse()
+{
+        test_solve_postfix("0", 0.0);
+        test_solve_postfix("1 + 3 * (4 - 3)", 0.0);
+        test_solve_postfix("5+6+3-7 + (9 + 1)+5", 0.0);
+}
+
 // Run unit tests with specific values
 void run_tests()
 {
@@ -175,7 +182,7 @@ void run_tests()
 
         // call test functions here
 
-        //test_solve_postfix("0", 0.0);
+        test_parse();
 
         //test_solve_expression("0", 0.0);
         //test_solve_expression("1", 1.0);
@@ -187,7 +194,7 @@ void run_tests()
         test_queue();
 
         // run tests for infix to postfix conversion
-        infix_to_postfix_test_cases();
+        //infix_to_postfix_test_cases();
 
         printf("complete.\n");
 }

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "parse.h"
 #include "lib.h"
 
@@ -19,6 +20,23 @@ char* infix_to_postfix(char* expr)
 // calculate the result of a reverse polish notation expression
 float solve_postfix(char* expr)
 {
+        stack s;
+        stack *sp = &s;
+        init_stack(sp);
+        char c;
+
+        // loop through expression
+
+        size_t length = strnlen(expr, MAX_STRING);
+        printf("length: %zu\n", length);
+
+        for (int i = 0; i < length; i++) {
+                c = expr[i];
+                push(sp, c);
+                printf("%c", expr[i]);
+        }
+        print_stack(sp);
+        printf("\n");
         return 0.0;
 }
 
