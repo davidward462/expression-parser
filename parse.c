@@ -6,14 +6,6 @@
 // convert infix expression to postfix (reverse polish notation)
 char* infix_to_postfix(char* expr)
 {
-        // Do the shunting-yard algorithm
-
-        // Initialize variables
-        stack s;
-        queue q;
-        stack *sp = &s;
-        queue *qp = &q;
-
         return "";
 }
 
