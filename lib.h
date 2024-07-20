@@ -2,8 +2,8 @@
 #ifndef LIB_H
 #define LIB_H
 
-#define STACK_SIZE 8
-#define QUEUE_SIZE 8
+#define STACK_SIZE 32
+#define QUEUE_SIZE 32
 #define STACK_EMPTY '\0'
 
 // Definition for stack which holds characters

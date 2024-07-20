@@ -137,7 +137,7 @@ void print_queue(queue *qp)
         if (!queue_is_empty(qp)) {
                 // go through the array starting at 'front' value and print each until 'rear'
                 for (int i = f; i <= r; i++) {
-                        printf("%c ", qp->q[i]);
+                        printf("%c", qp->q[i]);
                 }
                 printf("\n");
         }
