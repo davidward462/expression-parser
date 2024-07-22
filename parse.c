@@ -3,6 +3,13 @@
 #include "parse.h"
 #include "lib.h"
 
+// Break input expression string into tokens
+// TODO: Determine argument and return value
+void tokenize()
+{
+
+}
+
 // convert infix expression to postfix (reverse polish notation)
 char* infix_to_postfix(char* expr)
 {
